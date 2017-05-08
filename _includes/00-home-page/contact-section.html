@@ -1,0 +1,10 @@
+<section class="contact-section">
+  <h1 class="novis-center section-title">{{site.contact-title}}</h1>
+  <div id="form-messages" class="succes"></div>
+  <form id="ajax-contact" class="contact-form" action="mailer.php" method="post">
+    <input type="text" name="name" value="" placeholder="{{site.name-placeholder}}" contact-input>
+    <input type="email" name="email" value="" placeholder="{{site.email-placeholder}}" contact-input>
+    <textarea name="message" rows="8" cols="80" placeholder="{{site.message-placeholder}}" contact-textarea></textarea>
+    <button type="submit" name="button" class="novis-button bgc-primary">{{site.contact-button}}</button>
+</form>
+</section>

@@ -1,0 +1,16 @@
+<section class="portfolio-section">
+  <h1 class="novis-center section-title">{{site.portfolio-title}}</h1>
+  <div class="project-wrap">
+    {% for posts in site.categories.test limit:3 %}
+      <article class="project">
+        <a href="{{posts.url}}">
+          <div class="project-bgc" style="background-image: {{posts.thumbnail}}"></div>
+          <div class="project-hover">
+            <h1>{{posts.title}}</h1>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+</div>
+  <a href="{{site.portfolio-page-slug}}" class="novis-button bgc-primary">{{site.portfolio-button-title}}</a>
+</section>

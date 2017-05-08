@@ -1,0 +1,192 @@
+.novis-header
+  width: 100%
+  height: 100px
+  position: fixed
+  transition: 0.5s
+  z-index: 2
+  background-color: $primary-color
+.hidden
+  visibility: hidden
+.novis-nav-bar
+  margin: 0 60px
+.novis-logo
+  float: left
+  height: 100px
+  position: relative
+  img
+    position: absolute
+    height: 60px
+    width: auto
+    top: 50%
+    transform: translateY(-50%)
+
+.novis-navigation
+  float: right
+  line-height: 100px
+  a
+    font-size: 18px
+    font-weight: 300
+    text-transform: uppercase
+    color: $text-light
+    margin-right: 30px
+    position: relative
+    &:last-child
+      margin-right: 0px
+    &::before,
+    &::after
+      position: absolute
+      left: 0px
+      width: 100%
+      height: 1px
+      background-color: $text-light
+      content: ""
+      opacity: 0
+      transition: all 0.3s
+    &::before
+      top: 0px
+      transform: translateY(10px)
+    &::after
+      bottom: 0px
+      transform: translateY(-10px)
+    &:hover::before
+      transform: translateY(-5px)
+      opacity: 1
+    &:hover::after
+      transform: translateY(5px)
+      opacity: 1
+  .current::before
+    transform: translateY(-5px)
+    opacity: 1
+  .current::after
+    transform: translateY(5px)
+    opacity: 1
+
+.novis-welcome-section
+  width: 100%
+  height: 90vh
+  background-size: cover
+  background-repeat: no-repeat
+  background-attachment: fixed
+  //background-position: bottom
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  &.novis-home-page
+    background-image: $home-welcome-img
+  &.novis-about-page
+    background-image: $about-welcome-img
+  &.novis-portfolio-page
+    background-image: $portfolio-welcome-img
+  &.novis-gallery-page
+    background-image: $gallery-welcome-img
+  &.novis-contact-page
+    background-image: $contact-welcome-img
+
+  h1
+    max-width: 90%
+    padding-top: 10%
+    padding-bottom: 30px
+    color: $text-light
+    font-weight: 300
+    font-size: 36px
+    text-align: center
+    animation: slide-from-left 1s ease-in-out 1
+
+.welcome-subtitle
+  font-size: 30px
+  color: $text-light
+  font-weight: 300
+  animation: slide-from-right 1s ease-in-out 1
+
+/* Mobile Header */
+.mobile-header
+  display: none
+.mobile-nav-toggle
+  display: none
+
+@media(max-width: 800px)
+  /* Navigation Bar */
+  .novis-nav-bar
+    margin: 0 20px
+  .novis-navigation
+    display: none
+  .mobile-header
+    display: block
+    position: fixed
+    width: 100%
+    transform: translateY(-100%)
+    transition: 0.5s
+    z-index: 2
+    &.is-open
+      transform: translateY(98px)
+    .mobile-navigation
+      text-align: center
+      background-color: $primary-color
+      a
+        line-height: 35px
+        color: white
+        display: block
+        opacity: 0.6
+        &.current
+          opacity: 1
+  .mobile-nav-toggle
+    display: flex
+    position: relative
+    float: right
+    margin-right: 10px
+    margin-top: 20px
+    height: 60px
+    width: 60px
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    span,
+    span::before,
+    span::after
+      transition: 0.1s
+      display: block
+      position: absolute
+      content: ""
+      background-color: white
+      height: 2px
+      width: 100%
+    span::before
+      top: -17px
+    span::after
+      top: 17px
+    &.is-open span
+      background-color: transparent
+    &.is-open span::before
+      top: 0px
+      transform: rotate(45deg)
+      transition: 0.5s
+    &.is-open span::after
+      transform-origin: center
+      top: 0px
+      transform: rotate(-45deg)
+      transition: 0.5s
+
+  /* Header Welcome Section */
+  .welcome-subtitle
+    font-size: 22px
+  .novis-welcome-section
+    h1
+      font-size: 26px
+
+
+
+
+
+
+@keyframes slide-from-left
+  0%
+    transform: translateX(-100vw)
+  100%
+    transform: translateX(0%)
+@keyframes slide-from-right
+  0%
+    transform: translateX(100vw)
+  100%
+    transform: translateX(0%)

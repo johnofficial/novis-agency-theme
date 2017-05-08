@@ -1,0 +1,56 @@
+<div class="mobile-header">
+  <nav class="mobile-navigation">
+    <a href="/" class="{% if page.url =='/' %}current{% endif %}">Home</a>
+    <a href="{{site.about-page-slug}}" class="{% if page.url contains {{site.about-page-slug}} %}current{% endif %}">About</a>
+    <a href="{{site.portfolio-page-slug}}" class="{% if page.url contains {{site.portfolio-page-slug}} %}current{% endif %}">Portfolio</a>
+    <a href="{{site.gallery-page-slug}}" class="{% if page.url contains {{site.gallery-page-slug}} %}current{% endif %}">Gallery</a>
+    <a href="{{site.contact-page-slug}}" class="{% if page.url contains {{site.contact-page-slug}} %}current{% endif %}">Contact</a>
+  </nav>
+</div>
+<header class="novis-header">
+  <section class="novis-nav-bar">
+    <div class="novis-logo">
+      <a href="/">
+        {{site.website-logo}}
+      </a>
+    </div>
+    <nav class="novis-navigation">
+      <a href="/" class="{% if page.url =='/' %}current{% endif %}">Home</a>
+      <a href="{{site.about-page-slug}}" class="{% if page.url contains {{site.about-page-slug}} %}current{% endif %}">About</a>
+      <a href="{{site.portfolio-page-slug}}" class="{% if page.url contains {{site.portfolio-page-slug}} %}current{% endif %}">Portfolio</a>
+      <a href="{{site.gallery-page-slug}}" class="{% if page.url contains {{site.gallery-page-slug}} %}current{% endif %}">Gallery</a>
+      <a href="{{site.contact-page-slug}}" class="{% if page.url contains {{site.contact-page-slug}} %}current{% endif %}">Contact</a>
+    </nav>
+    <div class="mobile-nav-toggle">
+      <span></span>
+    </div>
+  </section>
+
+</header>
+<section class="novis-welcome-section {{page.page-class}}">
+
+
+  {% if page.current-page == 'home' %}
+    <h1 class="home-page-welcome-text">{{site.home-page-welcome-text}}</h1>
+    <a href="{{site.about-page-slug}}" class="novis-button bgc-secondary">{{site.home-page-welcome-button}}</a>
+  {% endif %}
+
+  {% if page.current-page == 'about' %}
+    <h1 class="novis-center">{{site.about-page-welcome-text}}</h1>
+    <h3 class="welcome-subtitle novis-center">{{site.about-page-welcome-subtitle}}</h3>
+  {% endif %}
+
+  {% if page.current-page == 'portfolio' %}
+    <h1 class="novis-center">{{site.portfolio-page-welcome-text}}</h1>
+    <h3 class="welcome-subtitle novis-center">{{site.portfolio-page-welcome-subtitle}}</h3>
+  {% endif %}
+  {% if page.current-page == 'gallery' %}
+    <h1 class="novis-center">{{site.gallery-page-welcome-text}}</h1>
+    <h3 class="welcome-subtitle novis-center">{{site.gallery-page-welcome-subtitle}}</h3>
+  {% endif %}
+  {% if page.current-page == 'contact' %}
+    <h1 class="novis-center">{{site.contact-page-welcome-text}}</h1>
+    <h3 class="welcome-subtitle novis-center">{{site.contact-page-welcome-subtitle}}</h3>
+  {% endif %}
+
+</section>

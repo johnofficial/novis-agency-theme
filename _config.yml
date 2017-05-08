@@ -1,0 +1,86 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+lang-tag: sr
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+favico: /assets/img/favico.png
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+twitter_username: jekyllrb
+github_username:  jekyll
+primary-color: ffffff
+website-logo: <img src="/assets/img/logo.png" alt="Novis Logo">
+# General Slugs
+about-page-slug: /about
+portfolio-page-slug: /portfolio
+gallery-page-slug: /gallery
+contact-page-slug: /contact
+
+# ----------------------------- Home Page Vars -----------------------------
+home-page-welcome-text: Home Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+home-page-welcome-button: Learn More
+#Service Panels Section
+first-service-title: Lorem Ipsum One
+first-service-content: Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet adipiscing.
+second-service-title: Lorem Ipsum Two
+second-service-content: Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet adipiscing.
+third-service-title: Lorem Ipsum Three
+third-service-content: Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet adipiscing.
+service-button-title: Learn More
+#Portfolio Section
+portfolio-title: Portfolio - Work
+portfolio-button-title: Show More
+#Contact Section
+contact-title: Contact Us
+name-placeholder: Name
+email-placeholder: E-mail
+message-placeholder: Message
+contact-button: Submit
+# ----------------------------- About Page Vars -----------------------------
+about-page-welcome-text: About Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+about-page-welcome-subtitle: About Subtitle Lorem Ipsum
+
+# ----------------------------- Portfolio Page Vars -----------------------------
+portfolio-page-welcome-text: Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+portfolio-page-welcome-subtitle: Portfolio Subtitle Lorem Ipsum
+
+#  ----------------------------- Gallery Page Vars -----------------------------
+gallery-page-welcome-text: Gallery Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+gallery-page-welcome-subtitle: Gallery Subtitle Lorem Ipsum
+
+# ----------------------------- Contact Page Vars -----------------------------
+contact-page-welcome-text: Contact Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+contact-page-welcome-subtitle: Contact Subtitle Lorem Ipsum
+
+# ----------------------------- Developer Info -----------------------------
+developer_site: https://novis.rs/
+developer_facebook: https://www.facebook.com/novisdizajn/
+developer_instagram: https://www.instagram.com/novis_dizajn/
+developer_email: jovan.savic@novis.rs
+developer_number: +381 61 188 18 19
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

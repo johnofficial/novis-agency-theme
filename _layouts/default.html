@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{site.lang-tag}}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{site.description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="icon" href="{{site.favico}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900&amp;subset=latin-ext" rel="stylesheet">
+    <meta name="theme-color" content="#{{site.primary-color}}">
+	   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Social Networks Meta Tags -->
+    <meta property="og:type" 		content="article">
+    <meta property="og:title" 		content="{{page.title}}">
+    <meta property="og:url" 		content="{{site.url}}">
+    <meta property="og:image" 		content="{{site.favico}}">
+    <meta property="og:site_name" 	content="{{site.title}}">
+    <meta property="og:description" content="{{site.description}}">
+  </head>
+  <body>
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+    <script src="/assets/js/jquery-3.1.0.min.js" ></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/{{page.js-name}}.js"></script>
+
+    </script>
+  </body>
+</html>
